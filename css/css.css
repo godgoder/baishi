@@ -1,0 +1,408 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+@font-face {
+    font-family: "Sofia Pro Light";
+    src: url("../assets/fonts/0eaf6264-15ee-4251-826e-9c0a59e8395f-.eot#iefix");
+    src: url("../assets/fonts/0eaf6264-15ee-4251-826e-9c0a59e8395f-.eot#iefix") format("eot"), url("../assets/fonts/8d11b8a0-868c-4a53-8b26-9f0ccbd58247.woff2") format("woff2"), url("../assets/fonts/9b976f15-23b7-45cd-ad4b-59c95b2889f9.woff") format("woff"), url("../assets/fonts/864da3de-5a97-4ce6-a22b-22932ed4dfe0.ttf") format("truetype"), url("../assets/fonts/d5898683-1b2a-4b1b-8058-0c8db30e40cf.svg#d5898683-1b2a-4b1b-8058-0c8db30e40cf") format("svg")
+}
+
+@font-face {
+    font-family: "Sofia Pro Regular";
+    src: url("../assets/fonts/941243bb-e692-46f8-91b9-6e621e5c1ff8-.eot#iefix");
+    src: url("../assets/fonts/941243bb-e692-46f8-91b9-6e621e5c1ff8-.eot#iefix") format("eot"), url("../assets/fonts/8b31e0d7-5f53-45c2-b318-064f0b532543.woff2") format("woff2"), url("../assets/fonts/476fe015-ab32-40a2-8fed-0a5af9a3bba4.woff") format("woff"), url("../assets/fonts/d8bcfa37-4f93-49cf-8dea-c29e894af58e.ttf") format("truetype"), url("../assets/fonts/28fc42bb-8761-4e6a-8c62-65d4a41c9e33.svg#28fc42bb-8761-4e6a-8c62-65d4a41c9e33") format("svg")
+}
+
+@font-face {
+    font-family: "Sofia Pro Bold";
+    src: url("../assets/fonts/c2440dd8-b25c-49ba-bc04-8a638a943324-.eot#iefix");
+    src: url("../assets/fonts/c2440dd8-b25c-49ba-bc04-8a638a943324-.eot#iefix") format("eot"), url("../assets/fonts/80042803-0630-405f-b2d2-af97b4e50b46.woff2") format("woff2"), url("../assets/fonts/ec41d681-0313-4b04-88c0-820aebb51f4e.woff") format("woff"), url("../assets/fonts/81434fc3-e426-4a4c-987d-f25c098198c4.ttf") format("truetype"), url("../assets/fonts/59fd3475-fba9-4c77-94f9-959fd3925e06.svg#59fd3475-fba9-4c77-94f9-959fd3925e06") format("svg")
+}
+
+@font-face {
+    font-family: "Sofia Pro Black";
+    src: url("../assets/fonts/6bd004df-7217-4ef6-9ed8-c99a12b77bf1-.eot#iefix");
+    src: url("../assets/fonts/6bd004df-7217-4ef6-9ed8-c99a12b77bf1-.eot#iefix") format("eot"), url("../assets/fonts/fb8331b5-dfd3-496e-9a0e-8afbb5014272.woff2") format("woff2"), url("../assets/fonts/b65232b3-e982-4cd6-a8ae-4bee2ecdb90d.woff") format("woff"), url("../assets/fonts/2dec1b8b-9bad-4cc0-8bea-76f93ebb2331.ttf") format("truetype"), url("../assets/fonts/45adc5ab-786d-4610-bca1-78be10bea16d.svg#45adc5ab-786d-4610-bca1-78be10bea16d") format("svg")
+}
+.clearfix:before,.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+.clearfix{
+    zoom: 1;
+}
+.w1201{
+    width: 1201px;
+    margin: 0 auto;
+}
+ul,ol{
+    list-style: none;
+
+    /*去除列表的点*/
+}
+img{
+    display: block;
+    border: none;
+    /*去除图片间隔的3PX*/
+}
+a{
+    text-decoration: none;
+
+    /*去除文字的下划线*/
+    /*    vertical-align: top; */
+    /*顶端对齐*/
+
+}
+input{
+    outline: none;
+    border: 0;
+}
+/*i,em{*/
+/*font-style: normal;*/
+/*}*/
+/*b,strong{*/
+/*font-weight: normal;*/
+/*}*/
+html,body{
+    height: 500%;
+}
+#gradient{
+    background: url("../img/gradient.png");
+    background-size: 100%;
+    opacity: 0;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    z-index: 1;
+    transition: opacity 1s;
+}
+#gradient.on{
+    opacity: 0.9;
+    transition: opacity 1s;
+}
+.head{
+    height: 66px;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+.head .line{
+    width: 100%;
+    height: 8px;
+    background-color: #042a54;
+}
+.head img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top:14px;
+    left: 42px;
+}
+.head i{
+    background-image: url("../img/pepsi-logo-type.svg");
+    background-size: 100%;
+    width: 90px;
+    height: 30px;
+    position: absolute;
+    top:22px;
+    left: 103px;
+}
+.nava{
+     height: 66px;
+     width: 70px;
+     background-color: #042a54;
+     position: absolute;
+     top:0;
+     right: 40px;
+ }
+.nava:hover p:nth-child(1) {
+transform: rotate3d(0, 1, 0, 90deg) translateY(7px)
+}
+.nava:hover p:nth-child(2) {
+    transition: 0.4s;
+    transform: rotate3d(0, 0, 1, 45deg) translate3d(-1px, 2px, 1px);
+    width:17px;
+}
+.nava:hover p:nth-child(3) {
+    transition: 0.4s;
+    transform: rotate3d(0, 0, 1, -45deg) translate3d(10px, 1px, 0px);
+    width:17px;
+}
+
+
+.nava .box{
+    width: 23px;
+    height: 20px;
+    position: absolute;
+    top:25px;
+    left: 24px;
+    background-color: #042a54;
+    overflow: hidden;
+}
+.nava .box p{
+    margin-bottom: 3px;
+    background-color: #fff;
+    width: 23PX;
+    height: 4px;
+}
+/*position: fixed;*/
+/*top:55px;*/
+/*height: 682px;*/
+/*width: 100%;*/
+
+.banner{
+    margin-left:80px;
+    height: 630px;
+    width: 630px;
+    position: fixed;
+    top:55px;
+    overflow: hidden;
+}
+.banner .box{
+    position: absolute;
+    width: 3780px;
+    height: 630px;
+}
+.banner .box div{
+
+    float: left;
+}
+.box div:nth-child(7){
+    background: url("../img/a.jpeg") 0 0 no-repeat;
+    background-size: 1000%
+
+}
+.box div{
+    display: block;
+    width: 630px; height: 630px;
+    animation: heart-burst steps(3) 0.8s infinite both;
+}
+.stop {
+    animation-play-state: paused;
+}
+@keyframes heart-burst {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+.mi .right{
+    position: fixed;
+    top:73px;
+    right:40px;
+    line-height: 0.9em;
+    margin: 0 0 40px;
+    width: 175px;
+    z-index: 2;
+
+
+}
+.mi .right li{
+     text-transform: uppercase;
+     font-family: "Sofia Pro Black";
+     font-size: 35px;
+     line-height: 1em;
+     float: right;
+     font-weight:bold;
+     height: 35px;
+     color: #aa469c;
+     overflow: hidden;
+     text-align: right;
+     position: relative;
+
+ }
+.mi .right li span{
+    text-transform: uppercase;
+    font-family: "Sofia Pro Black";
+    font-size: 35px;
+    line-height: 1em;
+    font-weight:bold;
+    height: 35px;
+    float: right;
+    overflow: hidden;
+    text-align: right;
+    position: absolute;
+    left: 0;
+    top:0;
+    color: #CCC;
+}
+@keyframes name {
+    0%{
+        width: 100%;
+
+    }
+    100%{
+        width: 0;
+    }
+}
+.mi .right li span#on{
+    animation: name 0.6s both;
+}
+.mi .right li:hover span{
+    animation: name 0.6s both;
+}
+
+
+
+.mi .right li.word1 {
+    color: #004a97;
+}
+
+.mi .right li.word2{
+    color: #aa469c;
+}
+.mi .right li.word3{
+    color: #ff623f;
+}
+.mi .right li.word4{
+    color: #e5c609;
+}
+.mi .right li.word5{
+    color: #008fbe;
+}
+.mi .right li.word6{
+    color: #54ba3d;
+}
+
+.mi .xbanner{
+    position: fixed;
+    top:400px;
+    left:711px;
+    width: 392px;
+    height: 268px;
+    overflow: hidden;
+    z-index: 1;
+}
+.mi .xbanner:hover .xbox div{
+    color: #ccc;
+}
+.mi .xbanner:hover .icon{
+    top:200px;
+    transition: top .4s;
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    -webkit-filter: grayscale(1) brightness(3);
+    filter: grayscale(1) brightness(3)
+}
+.mi .xbanner .xbox{
+    line-height: 56px;
+    width: 2353px;
+    position: relative;
+
+
+}
+.mi .xbanner .xbox div{
+    text-transform: uppercase;
+    font-family: "Sofia Pro Black";
+    font-size: 60px;
+    float: left;
+    font-weight: bold;
+    color: #004a97;
+    width: 392px;
+    height: 168px
+}
+.mi .icon{
+    width: 50px;
+    height: 50px;
+    background: url("../img/icon.svg");
+    position: relative;
+    top: 190px;
+    left:0;
+
+
+
+}
+#back{
+    position: absolute;
+    top:800px;
+    z-index: 1;
+    height: 20000px;
+    width: 100%;
+    background: url("../img/back.jpeg");
+    background-size: 100%;
+    background-attachment: fixed;
+}
+#back .whiteback{
+    position: absolute;
+    top:0;
+    z-index: 1;
+
+    width: 100%;
+    background-color: white;
+}
+.nom{
+    position: relative;
+    left:107px;
+    width: 658px;
+}
+
+.nom h1{
+    text-transform: uppercase;
+    font-family: "Sofia Pro Black";
+    font-size: 46px;
+    width: 560px;
+    height: 87px;
+    line-height: 40px;
+    color: #004A97;
+    margin-top:105px;
+    -webkit-user-select: none;
+}
+.nom .share{
+    width: 100%;
+    height: 47px;
+}
+.nom .share li{
+    height: 35px;
+    width: 35px;
+    float: left;
+    padding: 5px 7px;
+}
+.nom .share li:hover img{
+    transform: scale(1.2)
+}
+.nom .share li img{
+    height: 35px;
+    width: 35px;
+    transition: transform 0.3s
+}
+/*#back .whiteback .nom .doc{*/
+    /*width: 658px;*/
+/*}*/
+.nom .doc img{
+    width: 100%;
+    height: 438px;
+}
+.nom .doc p{
+    width: 100%;
+    height: 100%;
+    line-height: 35px;
+    font-size: 19px;
+    margin: 41px 0;
+    /*font-family: "Sofia Pro Light";*/
+    font-family: "Sofia Pro Light", "Helvetica Neue Light", HelveticaNeue-Light, "Helvetica Neue", Calibri, Helvetica, Arial;
+    -webkit-user-select: none;
+}
+.nom .doc p a{
+    color: #008fbe;
+    font-size: 20px;
+}
+#back .laz{
+    /*margin-top: 163px;*/
+    position: absolute;
+    top:7765px;
+    z-index: 1;
+    width: 100%;
+    background-color: white;
+}
